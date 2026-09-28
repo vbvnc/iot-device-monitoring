@@ -1,0 +1,4 @@
+experiment_id,run,node_count,metric,value,unit,start_time,end_time,notes
+EXP-B,1,1,message_latency_ms,,,,,待填写
+EXP-B,1,1,report_success_rate,,,,,待填写
+EXP-B,1,1,alarm_response_ms,,,,,不适用

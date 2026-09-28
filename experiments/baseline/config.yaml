@@ -1,0 +1,50 @@
+# Baseline 实验配置
+# 用途：记录基础链路（终端 → MQTT → Spring Boot → 数据库 → Web）的运行环境与参数
+# 请把"待填写"替换为实际值
+
+experiment:
+  id: "EXP-B"
+  name: "baseline_chain"
+  date: "待填写"
+  operator: "待填写"
+
+hardware:
+  terminal: "待填写（STM32 / ESP32 型号）"
+  sensor: "待填写"
+  node_count: 1
+  power: "待填写"
+
+firmware:
+  version: "待填写"
+  publish_interval_ms: 1000
+  mqtt_qos: 1
+  offline_cache: false
+  auto_reconnect: false
+  data_resend: false
+
+mqtt:
+  broker: "待填写（EMQX / Mosquitto）"
+  broker_version: "待填写"
+  host: "待填写"
+  port: 1883
+  topic_pattern: "device/{deviceId}/status"
+
+backend:
+  framework: "Spring Boot"
+  version: "待填写"
+  mqtt_client: "待填写"
+  database: "待填写（MySQL / PostgreSQL）"
+  db_version: "待填写"
+
+frontend:
+  stack: "待填写"
+  version: "待填写"
+
+network:
+  environment: "待填写（局域网 / 校园网 / WiFi 频段）"
+  bandwidth: "待填写"
+
+run:
+  duration_s: 600
+  repeats: 3
+  random_seed: 42

@@ -1,0 +1,103 @@
+# ===== 数据集 / 模型（不应提交大文件） =====
+data/
+datasets/
+*.csv.gz
+*.zip
+*.rar
+*.7z
+*.parquet
+models/
+weights/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.pb
+*.bin
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.conda/
+.idea/
+.mypy_cache/
+.pytest_cache/
+*.egg-info/
+
+# ===== Java / Spring Boot =====
+target/
+build/
+.gradle/
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*mvnw*
+!.mvn/wrapper/maven-wrapper.jar
+
+# ===== Node / 前端 =====
+node_modules/
+dist/
+.cache/
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# ===== 嵌入式 / 硬件工具链 =====
+*.o
+*.elf
+*.hex
+*.map
+*.lst
+*.su
+*.d
+Debug/
+Release/
+*.uvprojx.user
+*.ioc.bak
+# Vivado
+*.jou
+*.log
+*.str
+*.Xil/
+*.runs/
+*.cache/
+*.hw/
+*.sim/
+*.ip_user_files/
+*.srcs/
+Vivado*/
+vivado*.log
+
+# ===== IDE / 系统 =====
+.vscode/*
+!.vscode/settings.json.example
+!.vscode/launch.json.example
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 密钥 / 隐私 / 版权（严禁提交） =====
+*.pem
+*.key
+*.p12
+*.jks
+secrets/
+.env
+*.env
+application-local.yml
+application-secret.yml
+# 含个人隐私的数据
+private/
+personal/
+# 有版权限制的教材 / 论文 PDF
+refs/*.pdf
+literature/*.pdf
+*.pdf
+!docs/**/*.pdf

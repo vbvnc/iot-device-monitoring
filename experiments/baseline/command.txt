@@ -1,0 +1,17 @@
+# Baseline 复现命令
+# 按实际项目填写；以下为占位示例
+
+# 1) 启动 MQTT Broker
+# docker run -d --name emqx -p 1883:1883 -p 18083:18083 emqx/emqx:latest
+
+# 2) 烧录 / 启动终端固件
+# （STM32: 使用 STM32CubeProgrammer / Keil 下载；ESP32: idf.py flash monitor）
+
+# 3) 启动 Spring Boot 服务端
+# cd backend && ./mvnw spring-boot:run
+
+# 4) 启动 Web 端
+# cd frontend && npm install && npm run dev
+
+# 5) 启动数据采集 / 统计脚本
+# python tools/collect_metrics.py --duration 600 --out experiments/baseline/metrics.csv
