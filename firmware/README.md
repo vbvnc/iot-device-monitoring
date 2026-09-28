@@ -1,6 +1,6 @@
 # firmware/ — 嵌入式固件
 
-存放 STM32 / ESP32 终端固件源码。
+存放 STM32 终端固件源码。
 
 ## 计划功能
 
@@ -13,5 +13,5 @@
 
 ## 约定
 
-- 每个平台一个子目录，如 `esp32/`、`stm32/`；
+- 目录约定：`stm32/`（HAL/寄存器工程，含 Keil/CubeMX 工程文件）；
 - 固件版本号与 `experiments/*/config.yaml` 中的 `firmware.version` 保持一致。

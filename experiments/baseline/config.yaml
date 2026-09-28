@@ -9,7 +9,7 @@ experiment:
   operator: "待填写"
 
 hardware:
-  terminal: "待填写（STM32 / ESP32 型号）"
+  terminal: "STM32（型号待填写）"
   sensor: "待填写"
   node_count: 1
   power: "待填写"
@@ -23,7 +23,7 @@ firmware:
   data_resend: false
 
 mqtt:
-  broker: "待填写（EMQX / Mosquitto）"
+  broker: "EMQX"
   broker_version: "待填写"
   host: "待填写"
   port: 1883
@@ -33,7 +33,7 @@ backend:
   framework: "Spring Boot"
   version: "待填写"
   mqtt_client: "待填写"
-  database: "待填写（MySQL / PostgreSQL）"
+  database: "MySQL"
   db_version: "待填写"
 
 frontend:

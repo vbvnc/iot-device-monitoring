@@ -87,7 +87,7 @@ iot-device-monitoring/
 │       ├── command.txt
 │       ├── notes.md
 │       └── metrics.csv
-├── firmware/                     嵌入式固件（STM32 / ESP32）
+├── firmware/                     嵌入式固件（STM32）
 ├── hardware/                     硬件资料（原理图、接线、BOM）
 ├── backend/                      Spring Boot 服务端
 └── frontend/                     Web 端
@@ -112,9 +112,9 @@ iot-device-monitoring/
 
 ## 十、环境与复现
 
-- **终端**：STM32 / ESP32（型号待定），开发环境待填写
-- **通信**：MQTT Broker（EMQX / Mosquitto 待定）
-- **服务端**：Spring Boot（版本待定）+ 数据库（MySQL / PostgreSQL 待定）
+- **终端**：STM32（具体型号待定），开发环境待填写
+- **通信**：MQTT（Broker 采用 EMQX）
+- **服务端**：Spring Boot（版本待定）+ 数据库 MySQL
 - **Web 端**：待定
 - **依赖版本**：详见 `experiments/baseline/config.yaml`
 

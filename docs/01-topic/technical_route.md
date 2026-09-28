@@ -4,7 +4,7 @@
 
 ```mermaid
 flowchart LR
-    A["嵌入式终端<br/>STM32 / ESP32"] -->|"采集设备状态"| B["MQTT 客户端<br/>发布状态/事件"]
+    A["嵌入式终端<br/>STM32"] -->|"采集设备状态"| B["MQTT 客户端<br/>发布状态/事件"]
     B -->|"MQTT over TCP"| C["MQTT Broker<br/>EMQX / Mosquitto"]
     C -->|"订阅消息"| D["Spring Boot 服务端"]
     D --> E["设备身份认证 /<br/>访问控制"]
@@ -17,14 +17,14 @@ flowchart LR
 
 ## 二、分层说明
 
-### 1. 终端层（firmware/ + hardware/）
+### 1. 终端层（STM32 · firmware/ + hardware/）
 - 设备状态采集（如温度、电压、运行状态、心跳等）
 - MQTT 客户端：发布状态消息与事件消息
 - 可靠性机制：断网缓存、自动重连、数据补传
 - 硬件资料：原理图、接线说明、BOM
 
 ### 2. 通信层
-- MQTT Broker 部署与主题（Topic）设计
+- MQTT Broker（EMQX）部署与主题（Topic）设计
 - QoS 策略、遗嘱消息（LWT）等
 - 主题命名约定，例如 `device/{deviceId}/status`
 
@@ -33,7 +33,7 @@ flowchart LR
 - 设备身份认证 / 用户权限 / 访问控制
 - 状态监测与异常规则判定
 - 异常事件记录与告警触发
-- 数据持久化（设备表、状态表、事件/告警表）
+- 数据持久化到 MySQL（设备表、状态表、事件/告警表）
 
 ### 4. 展示层（frontend/）
 - 设备实时状态看板
@@ -44,12 +44,24 @@ flowchart LR
 
 | 环节 | 候选方案 | 待定项 |
 |---|---|---|
-| 终端 | STM32 / ESP32 | 具体型号、传感器 |
-| 通信 | MQTT | Broker 选型、QoS 等级 |
-| 服务端 | Spring Boot | 版本、MQTT 客户端库 |
-| 数据库 | MySQL / PostgreSQL | 最终选型 |
+| 终端 | **STM32**（已定） | 具体型号、传感器 |
+| 通信 | **MQTT / EMQX**（已定） | QoS 等级、Topic 设计 |
+| 服务端 | **Spring Boot**（已定） | 版本、MQTT 客户端库 |
+| 数据库 | **MySQL**（已定） | 版本 |
 | 前端 | 待定 | 技术栈 |
 | 安全 | 设备身份 / 访问控制 | 认证方式（Token/证书等） |
+
+## 三之二、技术选型结论
+
+| 环节 | 选型 | 备注 |
+|---|---|---|
+| 终端 | STM32 | 具体型号待定 |
+| 通信协议 | MQTT | |
+| MQTT Broker | EMQX | 含可视化管理台，便于调试与截图 |
+| 服务端 | Spring Boot | 版本待定 |
+| 数据库 | MySQL | 版本待定 |
+| Web 端 | 待定 | |
+
 
 ## 四、实验指标与验证方法
 
